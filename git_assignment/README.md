@@ -4,4 +4,4 @@ New Feature Added into feature branch.
 
 This changes are added on Github remote.
 
-This line is from master branch.
+This line is from conflict branch.
