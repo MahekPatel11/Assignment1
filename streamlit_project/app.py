@@ -1,11 +1,25 @@
 import streamlit as st
-st.title("Streamlit Capstone Project")
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-name = st.text_input("Enter your name:")
+st.title("Demo: Pandas + Visualization in Streamlit")
 
-age = st.text_input("Enter your current age:")
+# Generate sample data
+data = pd.DataFrame({
+    'Category': ['A', 'B', 'C', 'D'],
+    'Values': np.random.randint(10, 100, 4)
+})
 
-st.write("This is the extra line. i have")
+st.subheader("Data Table")
+st.dataframe(data)
 
-if st.button("Submit"):
-    st.success(f"Hello {name} of age {age}, welcome to the Streamlit app!")
+# Create a bar plot
+fig, ax = plt.subplots()
+sns.barplot(x='Category', y='Values', data=data, palette='viridis', ax=ax)
+st.subheader("Bar Plot Visualization")
+st.pyplot(fig)
+
+option = st.selectbox("Select category", data['Category'])
+st.write(f"You selected {option}")
