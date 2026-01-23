@@ -1,4 +1,4 @@
-# Git, Linux Shell, Docker & Streamlit – Practical Assignments Portfolio 🚀
+# Git, Linux Shell, Docker & Streamlit – Practical Assignments 🚀
 
 ## 🔍 Project Summary
 
